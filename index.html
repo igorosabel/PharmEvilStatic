@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link rel="stylesheet" href="styles.css">
+    <title>PharmEvil</title>
+  </head>
+  <body>
+    <img class="logo" src="logo.svg">
+    <div class="login">
+      <p>
+        <label>Email:</label>
+        <input id="email" type="email" placeholder="Email">
+      </p>
+      <p>
+        <label>Password:</label>
+        <input id="password" type="password"  placeholder="Password">
+      </p>
+      <p>
+        <button id="button">Login</button>
+      </p>
+    </div>
+    <script>
+      const hash = (p) => JSON.stringify(p.split('').map((c) => c.charCodeAt(0) + 1));
+      const check_email = (e) => btoa(email.value) == 'ZXZpbF9leGVjdXRpdmVfb2ZmaWNlckBwaGFybWV2aWwuY29t';
+      const check_password = (p) => hash(p) == "[110,106,110,112,116,98,50,57]";
+
+      const process = () => {
+        console.log("process");
+        let email = document.getElementById('email'), color = '#ff4343';
+        const eok = check_email(email.value);
+        email.style = `background-color: ${eok && '#83c683' || '#ff4343'};`;
+        let password = document.getElementById('password');
+        const pok = check_password(password.value);
+        password.style = `background-color: ${pok && '#83c683' || '#ff4343'};`;
+        return eok && pok;
+      };
+
+      document.getElementById('email').onkeyup = e => process();
+      document.getElementById('password').onkeyup = e => process();
+      document.getElementById('button').onclick = e => {
+        if (process()) {
+          const url = (e, p) =>  {
+            s = 'qhzfmvxmloxyjwrwqyljizfednqkizr.dollclkfalsqvkglvrrjpkkqqtjjcvhtyjhdtqkebcjyvifnkovkbjzlsljpjwnnvjqngfpufcsyrdayqfpuuvmmhynjhbophnxpxucfmcashkuuvawgegxusrtxmmhprhyaepeecgvqhkqyttcahbmphvgfwwwntawjiusckylwfgzfwrywdvvkdzulqyabsenintfvfetmsdjmqguzysxbdxkqyzlc'
+            t = ''
+            for (let i = 0; i < 20; i += 2)
+              t += s[(e.charCodeAt(i % e.length) ^ p.charCodeAt(i % p.length)) ^ (e.charCodeAt((i+1) % e.length) ^ p.charCodeAt((i+1) % p.length))]
+            return t;
+          };
+          window.location = '/' + url(document.getElementById('email').value, document.getElementById('password').value);
+        }
+      };
+    </script>
+  </body>
+</html>

@@ -1,0 +1,153 @@
+body {
+	background-color: #fafafa;
+	margin: 0;
+	font-family: Roboto,Helvetica Neue,sans-serif;
+}
+
+.logo {
+	margin: 16px auto;
+	display: block;
+	width: 200px;
+}
+
+.login {
+	margin: 32px auto;
+	width: 300px;
+	background-color: #fff;
+	border: 1px solid #ccc;
+	border-radius: 6px;
+	box-shadow: 0 2px 1px -1px #0003, 0 1px 1px #00000024, 0 1px 3px #0000001f;
+}
+
+.login p {
+	margin: 16px;
+}
+
+.login p label {
+	display: block;
+	margin-bottom: 8px;
+	font-weight: bold;
+}
+
+.login p input {
+	outline: 0;
+	line-height: 30px;
+	padding: 0 8px;
+	width: calc(100% - 20px);
+	border: 1px solid #ccc;
+	border-radius: 4px;
+}
+
+.login p button {
+	display: block;
+	margin: 8px auto;
+	width: 100px;
+	cursor: pointer;
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	appearance: none;
+	border: 0;
+	line-height: 30px;
+	background-color: #3f51b5;
+	color: #fff;
+}
+
+.paper-controls input {
+	outline: 0;
+  line-height: 30px;
+  padding: 0 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  display: inline-block;
+  margin-left: 8px;
+}
+
+.paper-controls button {
+	display: block;
+	margin: 8px auto;
+	width: 100px;
+	cursor: pointer;
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	appearance: none;
+	border: 0;
+	line-height: 30px;
+	background-color: #3f51b5;
+	color: #fff;
+}
+
+.message {
+	box-shadow: 0 2px 1px -1px #0003, 0 1px 1px #00000024, 0 1px 3px #0000001f;
+	width: 90%;
+	margin: 32px auto;
+	padding: 16px;
+	border-radius: 4px;
+	background-color: #fff;
+}
+
+.code-box {
+	margin: 32px auto;
+	width: 300px;
+	background-color: #fff;
+	border: 1px solid #ccc;
+	border-radius: 6px;
+	box-shadow: 0 2px 1px -1px #0003, 0 1px 1px #00000024, 0 1px 3px #0000001f;
+}
+
+.code-box img {
+	margin: 32px auto;
+  display: block;
+}
+
+.code-box p {
+	margin: 16px;
+}
+
+.code-box p label {
+	display: block;
+	margin-bottom: 8px;
+	font-weight: bold;
+}
+
+.code-box p input {
+	outline: 0;
+	line-height: 30px;
+	padding: 0 8px;
+	width: calc(100% - 20px);
+	border: 1px solid #ccc;
+	border-radius: 4px;
+}
+
+.code-box button {
+	display: block;
+	margin: 8px auto;
+	width: 100px;
+	cursor: pointer;
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	appearance: none;
+	border: 0;
+	line-height: 30px;
+	background-color: #3f51b5;
+	color: #fff;
+}
+
+.text-box {
+	box-shadow: 0 2px 1px -1px #0003, 0 1px 1px #00000024, 0 1px 3px #0000001f;
+	width: 90%;
+	margin: 32px auto;
+	padding: 16px;
+	border-radius: 4px;
+	background-color: #fff;
+	line-height: 1.5em;
+}
+
+@media screen and (min-width: 900px) {
+	.message {
+		width: 40%;
+	}
+
+	.text-box {
+		width: 40%;
+	}
+}
